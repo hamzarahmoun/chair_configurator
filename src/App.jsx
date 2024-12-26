@@ -1,14 +1,13 @@
 
 import { Canvas } from "@react-three/fiber";
-import Experience from "./components/Experience";
 import "./App.css";
+import Experience from "./components/Experience";
 
 function App() {
   return (
       <div className="App">
-        <Canvas dpr={[1, 2]}>
+        <Canvas camera={{ position: [-1, 3, 5] }}>
           <color attach="background" args={["#213547"]} />
-          <fog attach="fog" args={["#213547", 10, 20]} />
           <Experience />
         </Canvas>
       </div>
