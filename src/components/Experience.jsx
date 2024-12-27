@@ -1,8 +1,11 @@
 import { MeshReflectorMaterial, PresentationControls } from '@react-three/drei';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Stage } from '@react-three/drei';
+import { useLoader } from '@react-three/fiber';
+import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 
 function Experience() {
+  const gltf = useLoader(GLTFLoader, "./models/chair.gltf");
   return (
     <PresentationControls
       speed={1.5}
@@ -11,10 +14,9 @@ function Experience() {
       polar={[-0.8, Math.PI / 4]}
     >
       <Stage environment="city" intensity={0.6} adjustCamera={false} >
-        <mesh  >
-          <boxGeometry />
-          <meshNormalMaterial />
-        </mesh>
+        <Suspense>
+          <primitive object={gltf.scene} />
+        </Suspense>
       </Stage>
 
       <mesh rotation={[-Math.PI / 2, 0, 0]} position-y={-2}>
