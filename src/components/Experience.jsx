@@ -10,8 +10,8 @@ function Experience() {
     <PresentationControls
       speed={1.5}
       global
-      zoom={1.5}
-      polar={[-0.8, Math.PI / 4]}
+      zoom={0.7}
+      polar={[-0.1, Math.PI / 4]}
     >
       <Stage environment="city" intensity={0.6} adjustCamera={false} >
         <Suspense>
