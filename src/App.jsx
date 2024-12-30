@@ -3,9 +3,11 @@ import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import Experience from "./components/Experience";
 import Configurator from "./components/Configurator";
+import { CustomizationProvider } from "./contexts/Customization";
 
 function App() {
   return (
+    <CustomizationProvider> 
       <div className="App">
         <Canvas camera={{ position: [0, 1, 5] }}>
           <color attach="background" args={["#213547"]} />
@@ -16,6 +18,7 @@ function App() {
         <Configurator />
 
       </div>
+    </CustomizationProvider>
   );
 }
 
