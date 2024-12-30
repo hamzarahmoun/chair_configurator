@@ -14,3 +14,52 @@
   flex-direction: column;
   gap: 16px;
 }
+.configurator_section_title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.configurator_section_values {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.item:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.item_dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: solid 2px #999999;
+}
+
+.item.item--active .item_dot {
+  border: solid 2px white;
+}
+
+.item_label {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: #aaa;
+  text-transform: capitalize;
+}
+.item.item--active .item_label {
+  color: white;
+}
