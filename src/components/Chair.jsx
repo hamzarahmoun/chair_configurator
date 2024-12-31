@@ -67,8 +67,13 @@ const Chair = (props) => {
         />
         
       </mesh>
-      <mesh geometry={nodes.Legs1.geometry} material={materials.Legs} />
-      <mesh geometry={nodes.Legs2.geometry} material={materials.Legs} visible={false}/>
+      <mesh geometry={nodes.Legs1.geometry} material={materials.Legs} visible={legs == 1}/>
+       
+       <mesh
+        geometry={nodes.Legs2.geometry}
+        material={materials.Legs}
+        visible={legs === 2}
+      />
     </group>
   )
 }
