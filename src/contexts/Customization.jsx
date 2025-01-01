@@ -88,7 +88,8 @@ export const CustomizationProvider = (props) => {
         chairColor,
         setChairColor,
         cushionColors,
-      }}
+        cushionColor,
+        setCushionColor,      }}
     >
       {props.children}
     </CustomizationContext.Provider>
