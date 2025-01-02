@@ -55,6 +55,8 @@ const Chair = (props) => {
          {...(material === "leather"
           ? leatherTextureProps
           : fabricTextureProps)}
+          color={chairColor.color}
+
         />
       </mesh>
       <mesh geometry={nodes.Chair.geometry} material={materials.Chair} />
@@ -64,6 +66,8 @@ const Chair = (props) => {
       >
         <meshStandardMaterial
           {...fabricTextureProps}
+          color={cushionColor.color}
+
         />
         
       </mesh>
